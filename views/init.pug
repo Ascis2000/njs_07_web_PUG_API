@@ -1,0 +1,19 @@
+
+doctype html
+html(lang="en")
+
+    include ./head.pug
+    include ./header.pug
+
+    body
+        main
+            if page === 'home'
+                include ./home.pug
+
+            if page === 'film'
+                include ./film.pug
+
+            if page === 'error'
+                include ./error.pug
+
+include ./footer.pug

@@ -1,0 +1,15 @@
+
+div.boxMain
+
+    h4 Películas con palabra de búsqueda: #{busqueda}
+    label Items por página: #{films.length}
+    label Nº de páginas: #{currentPage}/#{totalPages}
+
+    each film, index in films
+        div.film-grid
+            div.film-details
+                h4 #{index + 1}. #{film.Title}
+                label Año: #{film.Year}
+                label Tipo: #{film.Type}
+                label imdbID: #{film.imdbID}
+                img(src=film.Poster width="200" alt=film.Title)

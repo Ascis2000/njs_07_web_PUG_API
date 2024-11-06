@@ -12,6 +12,11 @@ app.use(express.json());
 // public
 app.use(express.static('public'));
 
+// body-parser
+// interpreta los envios de formulario
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // Motor PUG para plantilla
 app.set('view engine', 'pug');
 app.set('views','./views');
@@ -20,6 +25,8 @@ app.set('views','./views');
 /* app.get('/', (req, res) => {
     res.send('Hello 06 WEB PUG!')
 }); */
+
+require('dotenv').config();
 
 // Rutas WEB
 const paginaRoutes = require("./routes/pagina.web.routes");

@@ -1,0 +1,24 @@
+
+div.boxMain
+    form(action="/film" method="post")
+        label Pelicula:
+        input(name="film" type="text" class="" placeholder="Enter a Film" required)
+        input(type="submit" class="" value="Ver Datos Pelicula")
+
+    div.ejemplos
+        label Ejemplos /film/:title
+        a.links(href="/film/2001") 2001
+        a.links(href="/film/audition") Audition
+        a.links(href="/film/batman") Batman
+        a.links(href="/film/hulk") Hulk
+        a.links(href="/film/ichi") Ichi
+        a.links(href="/film/indiana") Indiana
+        a.links(href="/film/joker") Joker
+        a.links(href="/film/killer") Killer
+        a.links(href="/film/matrix") Matrix
+        a.links.error(href="/film/notfound") Not Found
+        a.links(href="/film/nightmare") Nightmare
+        a.links(href="/film/star%20wars") Star Wars
+        a.links(href="/film/superman") Superman
+        
+        
